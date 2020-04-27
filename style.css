@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Shadows Into Light', cursive;
+}
+
+body{
+	background-color: rgb(174, 231, 67);
+	overflow-x: hidden;
+}
+
+
+.mulai{
+	display: flex;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, .5);
+	z-index: 2;
+	cursor: pointer;
+	flex-direction: column;
+	transform: 1;
+	transition: all .5s ease;
+}
+
+.mulai h3{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	color: white;
+	font-size: 5em;
+	letter-spacing: 10px;
+	flex-direction: column;
+	text-align: center;
+}
+
+.mulai h3 span{
+	font-size: .5em;
+}
+
+
+.title{
+	position: relative;
+	margin-bottom: 50px;
+	text-align: center;
+	color: white;
+	z-index: 3;
+}
+
+.title h3{
+	text-shadow: 0px 2px 1px grey;
+	font-size: 3.5em;
+	letter-spacing: 10px;
+}
+
+.title p{
+	text-shadow: 0px 2px 1px grey;
+	font-size: 1.5em;
+	letter-spacing: 5px;
+	font-weight: 600;
+}
+
+.finish{
+	text-align: center;
+	color: white;
+	margin-top: -20px;
+}
+
+.finish .finish-btn{
+	font-size: 1.5em;
+	background-color: lightseagreen;
+	border-radius: 10px;
+	cursor: pointer;
+	color: white;
+	text-decoration: none;
+}
+
+.finish span{
+	text-shadow: 0px 2px 1px grey;
+	font-size: 2em;
+	letter-spacing: 10px;
+}
+
+.supgame h3{
+	margin: 10px;
+	text-shadow: 0px 2px 1px grey;
+	margin-left: 30px;
+	color: white;
+	letter-spacing: 3px;
+}
+
+.game{
+	display: flex;
+	width: 100vw;
+	justify-content: space-around;
+	transform: 1;
+	transition: all .5s ease;
+}
+
+.content {
+	width: 16vw;
+	border-radius: 5px;
+}
+
+.box{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.box span{
+	border: 1px solid white;
+	font-size: 2.3em;
+	color: white;
+	display: flex;
+	justify-content: center;
+	width: 4vw;
+	
+}
+
+.red-btn{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.red{
+	background-color: salmon;
+}
+
+.yellow{
+	background-color: pink;
+}
+
+.blue{
+	background-color: skyblue;
+
+}
+
+.green{
+	background-color: lightgreen;
+
+}
+
+.purple{
+	background-color: plum;
+
+}
+
+
+.but{
+	display: block;
+	position: relative;
+	width: 60px;
+	height: 50px;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.icon{
+	font-size: 1.5em;
+	position: relative;
+	top: -55px;
+	border-radius: 3px;
+	display: block;
+	width: 80px;
+	height: 55px;
+	z-index: 1;
+	pointer-events: none;
+	letter-spacing: 2px;
+	/*opacity: .5;*/
+}
+
+.icon:before{
+	content: 'tidak';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+#red:checked ~ .icon:before{
+	content: "ada"
+}
+#yellow:checked ~ .icon:before{
+	content: "ada"
+}
+#blue:checked ~ .icon:before{
+	content: "ada"
+}
+#green:checked ~ .icon:before{
+	content: "ada"
+}
+#purple:checked ~ .icon:before{
+	content: "ada"
+}
+
+.clear{
+	transform: scale(0);
+}
+
+@media screen and (max-width:1200px){
+	.box span{
+		font-size: 1.8em;
+	}
+	.icon{
+		font-size: 1.5em;
+	}
+}
+
+@media screen and (max-width:900px){
+	.game{
+		flex-direction: column;
+	}
+	.content{
+		margin: auto;
+		width: 80vw;
+	}
+	.box span{
+		font-size: 2.5em;
+		width: 20vw;
+	}
+	.icon{
+		width: 90px;
+		font-size: 1.8em;
+	}
+}
