@@ -42,7 +42,7 @@ function end() {
     mulai.classList.remove('clear');
     game.classList.add('clear');
     finish.classList.add('clear');
-    hasil.textContent = "Angka yg pikirkan adalah "+angka;
+    hasil.textContent = "Angka yg pikirkan anda adalah "+angka;
     angka = 0;
     // document.body.style.overflowY = "hidden"
 }
